@@ -27,9 +27,6 @@
                   <li><a class="dropdown-item" href="sexratio.html">Kondisi Jalan</a></li>
                   <li><a class="dropdown-item" href="area.html">Luas Area</a></li>
                   <li><a class="dropdown-item" href="Ratio.html">Sex Ratio</a></li>
-                  <li><a class="dropdown-item" href="pariwisata.html">pariwisata</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -44,7 +41,7 @@
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header">
-                    <h4>Jumlah Penduduk</h4>
+                    <h4>Fasilitas Pendidikan</h4>
                 </div>
                 <div class="card-body">
                     <div id="chart"></div>
@@ -78,8 +75,12 @@
       <script>
         var options = {
           series: [{
-          name: 'Jumlah Penduduk',
-          data: [81525, 110377, 57194, 106895, 59602, 11182, 49456, 43561, 12907, 12994, 66469]
+          name: 'Guru',
+          data: [115, 136, 106, 77, 66, 23, 92, 69, 12, 6, 83]
+        },
+        {
+          name: 'Sekolah',
+          data: [108, 136, 106, 77, 66, 23, 92, 63, 12, 6, 83]
         }],
           chart: {
           type: 'bar',
@@ -89,7 +90,10 @@
           bar: {
             horizontal: false,
             columnWidth: '55%',
-            endingShape: 'rounded'
+            endingShape: 'rounded',
+            dataLabels: {
+              position: 'top',
+            }
           },
         },
         dataLabels: {
@@ -108,7 +112,7 @@
         },
         yaxis: {
           title: {
-            text: '$ (thousands)'
+            text: 'Jumlah'
           }
         },
         fill: {
@@ -117,7 +121,7 @@
         tooltip: {
           y: {
             formatter: function (val) {
-              return val + " Jiwa"
+              return val + " "
             }
           }
         },
